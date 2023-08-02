@@ -31,6 +31,7 @@ class parserTest {
     public static void main(String args[]) {
         parseable parser = parserManager.getParser("XML");
         parser.parse("document.xml");
+        parser = parserManager.getParser("XML");
         parser.parse("document2.html");
     }
 }
