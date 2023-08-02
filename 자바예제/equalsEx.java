@@ -15,7 +15,7 @@ class equalsEx {
         if (v1.equals(v2)) {
             System.out.println("v1과 v2는 같다");
         } else {
-            System.out.println("v1과 ㅍ2는 다르다");
+            System.out.println("v1과 v2는 다르다");
         }
     }
 }
