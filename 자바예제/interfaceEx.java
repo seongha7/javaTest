@@ -10,8 +10,7 @@ class parserManager {
         if (type.equals("XML")) {
             return new XMLparser();
         } else {
-            parseable p = new HTMLparser();
-            return p;
+           return new HTMLparser();v
         }
     }
 }
