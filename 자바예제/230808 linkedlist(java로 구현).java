@@ -228,3 +228,15 @@ public class LinkedList {
     }
 
 }
+
+
+/* 결과값
+
+일 월 화 수 목 금 토 
+수
+일 월 화 목 금 토 
+월 화 목 금 토 
+토 금 목 화 월 
+
+Process finished with exit code 0 */
+
