@@ -19,7 +19,7 @@ class FruitBoxEx1 {
 
         // 상속관계라 가능
         fruitBox.add(new Fruit());
-        fruitBox.add(new Apple());
+        fruitBox.add(new Apple()); // ok. void add(Fruit item)
         fruitBox.add(new Grape());
 
         // 각각의 것들만 담을 수 있음(apple 에는 apple 만 가능)
