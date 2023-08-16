@@ -1,39 +1,40 @@
 package com.example.javatest;
 
 
-class Stack{
+
+class Stack {
     int arr[];
     int top;
     int capacity;
 
-    // 스택 초기화를 위한 생성자
+    //초기화를 위한 생성자
     Stack(int size) {
         arr = new int[size];
         capacity = size;
         top = -1;
     }
 
-    // 스택에 요소 x를 추가하는 함수
+    // 값을 추가하는 메서드
     void push(int x) {
         if (isFull()) {
-            System.out.println("overflow\nprogram terminated\n");
+            System.out.println("오버플로우\n프로그램을 종료합니다.\n"); // 사이즈 넘어가면 오버플로 때림
             System.exit(-1);
         }
-        System.out.println("inserting " + x);
+        System.out.println("입력 " + x);
         arr[++top] = x;
     }
 
-    // 스택에서 최상위 요소를 꺼내는 함수
+    // 스택에서 최상위 요소를 제거하는 메서드
     int pop() {
         if (isEmpty()) {
-            System.out.println("underflow\nprogram terminated");
+            System.out.println("값이 존재하지 않습니다.(underflow)\n프로그램을 종료합니다.");
             System.exit(-1);
         }
-        System.out.println("removing " + peek());
+        System.out.println("삭제중 " + peek());
         return arr[top--];
     }
 
-    // 스택에서 최상위 요소를 반환하는 함수
+    // 최상단 값 반환
     int peek() {
         if (!isEmpty()) {
             return arr[top];
@@ -42,41 +43,44 @@ class Stack{
         }
         return -1;
     }
-    // 스택ㄱ의 크기를 반환
+
+    // 크기 반환
     int size() {
         return top +1;
     }
-    // 비어있는지 확인
+
     boolean isEmpty() {
         return top == -1;
     }
-    // 꽉 찼는지 확인
+
     boolean isFull() {
         return top == capacity -1;
     }
 }
 
-class Main{
+class Main {
     public static void main(String[] args) {
         Stack stack = new Stack(3);
 
-         stack.push(1); // 추가
-         stack.push(2);
-
-         stack.pop(); // 상단 요소 제거
-         stack.pop();
-
-         stack.push(3);
-
-        System.out.println("the top element is " + stack.peek());
-        System.out.println("the stack size is " + stack.size());
+        stack.push(1);
+        stack.push(4);
+        stack.push(2);
 
         stack.pop();
+       // stack.pop();
+
+        stack.push(3);
+        stack.pop();
+
+        System.out.println("최상단 값은 " + stack.peek());
+        System.out.println("사이즈는 " + stack.size());
+
+
 
         if (stack.isEmpty()) {
-            System.out.println("the stack is empty");
+            System.out.println("비었습니다");
         } else {
-            System.out.println("the stack is not empty");
+            System.out.println("비지 않았습니다.");
         }
     }
 }
