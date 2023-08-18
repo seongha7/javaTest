@@ -24,7 +24,7 @@ package com.example.javatest;
             System.exit(-1); // 비정상종료
         } else {
             System.out.println("값을 받았습니다 -> " + x );
-            myArr[++top] = x;
+            myArr[++top] = x; // 값이 참조되기 전에 증가 (전위형)
         }
     }
 
@@ -45,14 +45,12 @@ package com.example.javatest;
             System.exit(-1);
         }
             System.out.println("삭제 중-> " + peek() );
-            return myArr[top--];
+            return myArr[top--]; // 값이 참조된 후에 감소 (후위형)
     }
 
      public boolean isEmpty() {
          return top == -1;
      }
-
-
 
      public boolean isFull() {
          return top == stackSize -1;
@@ -72,12 +70,6 @@ package com.example.javatest;
 
          System.out.println("최상단 값은 " + myStack.peek());
 
-
-
-
-
      }
-
-
 
  }
