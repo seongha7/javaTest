@@ -45,7 +45,10 @@ package com.example.javatest;
             System.exit(-1);
         }
             System.out.println("삭제 중-> " + peek() );
-            return myArr[top--]; // 값이 참조된 후에 감소 (후위형)
+            return myArr[top--] // 값이 참조된 후에 감소 (후위형)
+             // int 변수명 = myArr[top];
+             // top = top - 1;
+             // return 변수명;
     }
 
      public boolean isEmpty() {
