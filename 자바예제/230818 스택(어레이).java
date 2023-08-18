@@ -14,7 +14,7 @@ package com.example.javatest;
         //매개값 이용 필드변수 초기화
         myArr = new int[size];
         stackSize = size;
-        top = -1;
+        top = -1; // 스택이 비어있음을 나타내기 위한 초기값
     }
 
     // 값 추가
