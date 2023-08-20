@@ -1,5 +1,8 @@
+package com.example.javatest;
 
-public class SimpleLinkedList<T> {
+
+
+class SimpleLinkedList<T> {
     private Node<T> head;
 
     private static class Node<T> {
@@ -42,5 +45,3 @@ public class SimpleLinkedList<T> {
         list.print();
     }
 }
-```
-
