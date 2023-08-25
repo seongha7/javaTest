@@ -1,0 +1,15 @@
+class Ex {
+    public static void main(String args[]) {
+        Holjjag hol = new Holjjag(1);
+        Holjjag jjag = new Holjjag();
+
+        System.out.println(hol.print()); // 홀수
+        System.out.println(jjag.print());// 짝수
+    }
+}
+
+class Holjjag {
+    /**
+     * main 함수에서 실행하는 결과 와 동일하게 출력되도록
+     */
+}
