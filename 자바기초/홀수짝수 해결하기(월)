@@ -13,3 +13,27 @@ class Holjjag {
      * main 함수에서 실행하는 결과 와 동일하게 출력되도록
      */
 }
+
+//Scanner를 통한 입력값을 토대로 홀수짝수 구별
+
+package com.example.javatest;
+
+import java.util.Scanner;
+
+class Holjjag {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("숫자를 입력하세요 -> ");
+        
+        int num = scanner.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println("짝수");
+        } else {
+            System.out.println("홀수");
+        }
+
+    }
+
+}
