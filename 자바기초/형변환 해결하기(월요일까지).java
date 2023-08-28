@@ -91,13 +91,13 @@ package com.example.javatest;
 
 class Casting {
 
-      static long x = Long.MAX_VALUE;
+       long x = Long.MAX_VALUE;
         //int i = (int) x;
 
-       static long y = 1234567L;
+        long y = 1234567L;
       //   int i2 = (int) y;
 
-      static   int z;
+         int z;
 
         // z 변수에 x, y 변수에 선언되어있는 데이터를 안전하게 할당할수 있도록
         //조건문, 형변환 이용하여 다시 만들기
@@ -112,16 +112,19 @@ class Casting {
                 System.out.println("값 초과");
             } else {
                 int i = (int) c.x;
-                System.out.println(i);
+                c.z = i;
+                System.out.println(c.z);
             }
 
             if (c.y> Integer.MAX_VALUE) {
                 System.out.println("값 초과");
             } else {
                 int i2 = (int) c.y;
-                System.out.println(i2);
+                c.z = i2;
+                System.out.println(c.z);
             }
 
 
         }
     }
+
