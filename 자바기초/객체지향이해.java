@@ -19,7 +19,7 @@ class Sample {
         //cat.name = "bob";
         cat.setName("bob"); // 메서드 호출
 
-        Animal dog = new Animal();
+        Animal dog = new Animal();  //   dog에 cat 대입해보기
         dog.setName("tom");
         System.out.println(cat.name);
         System.out.println(dog.name); // 객체 변수의 값이 독립적으로 유지된다.
