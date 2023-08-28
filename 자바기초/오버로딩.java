@@ -4,10 +4,10 @@ class Test{
     void dog(){
         System.out.println("개 없음");
     }
-    void dog(int a, int b){
+    void dog(int a, int b){ // 오버로딩
         System.out.println("개: " +a+ "," +b);
     }
-    void dog(String c){
+    void dog(String c){ // 오버로딩
         System.out.println("개: " +c);
     }
 
