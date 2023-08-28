@@ -7,7 +7,7 @@ class Casting {
 }
 
 
-//double로 형변환 후 해결
+//double로 
 package com.example.javatest;
 
 class Casting {
@@ -55,4 +55,28 @@ class Casting {
     // z 변수에 x, y 변수에 선언되어있는 데이터를 안전하게 할당할수 있도록
 }
 
+//형변환
 
+package com.example.javatest;
+
+class Casting {
+    public static void main(String[] args) {
+
+
+        long x = Long.MAX_VALUE;
+        //int i = (int) x;
+        double d = (double) x;
+        System.out.println(d);
+
+
+
+        long y = 1234567L;
+        //int i2 = (int) y;
+        double d2 = (double) y;
+        System.out.println(d2);
+
+        // int z;
+
+        // z 변수에 x, y 변수에 선언되어있는 데이터를 안전하게 할당할수 있도록
+    }
+}
