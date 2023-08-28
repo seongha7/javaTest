@@ -81,3 +81,47 @@ class Casting {
         // z 변수에 x, y 변수에 선언되어있는 데이터를 안전하게 할당할수 있도록
     }
 }
+
+
+
+
+//모든 조건 충족 
+
+package com.example.javatest;
+
+class Casting {
+
+      static long x = Long.MAX_VALUE;
+        //int i = (int) x;
+
+       static long y = 1234567L;
+      //   int i2 = (int) y;
+
+      static   int z;
+
+        // z 변수에 x, y 변수에 선언되어있는 데이터를 안전하게 할당할수 있도록
+        //조건문, 형변환 이용하여 다시 만들기
+        //x나 y 값이  z로 온전히 들어가게
+    }
+
+    class CastingTest {
+        public static void main(String[] args) {
+            Casting c = new Casting();
+
+            if (c.x > Integer.MAX_VALUE) {
+                System.out.println("값 초과");
+            } else {
+                int i = (int) c.x;
+                System.out.println(i);
+            }
+
+            if (c.y> Integer.MAX_VALUE) {
+                System.out.println("값 초과");
+            } else {
+                int i2 = (int) c.y;
+                System.out.println(i2);
+            }
+
+
+        }
+    }
