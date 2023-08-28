@@ -30,10 +30,11 @@ class Casting {
 
 
 
-조건문, 형변환 이용하여 다시 만들기
-x나 y 값이  z로 온전히 들어가게
-// static 없이 
+//조건문, 형변환 이용하여 다시 만들기
+//x나 y 값이  z로 온전히 들어가게
 
+
+// static 없이 
 package com.example.javatest;
 
 class Casting {
