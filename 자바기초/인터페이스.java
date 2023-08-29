@@ -80,3 +80,41 @@ public class Sample {
         resowner.giveFood(b);
     }
 }       // 만약 손님이 늘어난다면, 만들어야 할 오버로딩된 메서드가 늘어나게 된다.
+
+
+// 예시 2
+
+package com.example.javatest;
+
+
+interface ResCustomer {
+    String getOrder();
+}
+
+class ResCustomer1 implements ResCustomer {
+    public String getOrder() {
+        return "1에게 제육을 준다.";
+    }
+}
+class ResCustomer2 implements ResCustomer {
+    public String getOrder() {
+        return "2에게 돈까스를 준다.";
+    }
+}
+
+class ResOwner {
+    public void giveFood(ResCustomer resCustomer) {
+        System.out.println(resCustomer.getOrder());
+    }
+}
+
+public class Sample {
+    public static void main(String[] args) {
+        ResOwner owner = new ResOwner();
+        ResCustomer1 a = new ResCustomer1();
+        ResCustomer2 b = new ResCustomer2();
+        
+        owner.giveFood(a);
+        owner.giveFood(b);
+    }
+}
