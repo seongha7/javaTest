@@ -101,6 +101,11 @@ class ResCustomer2 implements ResCustomer {
         return "2에게 돈까스를 준다.";
     }
 }
+class ResCustomer3 implements ResCustomer { // 추가
+    public String getOrder() {
+        return "3에게 고구마돈까스를 준다.";
+    }
+}
 
 class ResOwner {
     public void giveFood(ResCustomer resCustomer) {
@@ -113,8 +118,10 @@ public class Sample {
         ResOwner owner = new ResOwner();
         ResCustomer1 a = new ResCustomer1();
         ResCustomer2 b = new ResCustomer2();
-        
+        ResCustomer3 c = new ResCustomer3(); // 추가
+
         owner.giveFood(a);
         owner.giveFood(b);
+        owner.giveFood(c); // 추가
     }
 }
