@@ -125,3 +125,35 @@ public class Sample {
         owner.giveFood(c); // 추가
     }
 }
+// 인터페이스 다중 상속 예시 
+
+package com.example.javatest;
+
+
+interface Person {
+    String species = "영장류";
+
+      void country();
+}
+
+interface Father extends Person {
+     void country();
+}
+
+interface Mother extends Person {
+     void country();
+}
+
+public class Sample implements Mother,Father{
+
+    @Override
+    public void country() {
+        System.out.println("korea");
+    }
+
+    public static void main(String[] args) {
+        Sample sample = new Sample();
+        System.out.println("나의 생물학적 분류는 " + sample.species + "입니다.");
+        sample.country();
+    }
+}
