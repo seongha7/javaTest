@@ -85,7 +85,7 @@ class Casting {
 
 
 
-//모든 조건 충족 아직 못함
+//모든 조건 충족 
 
 package com.example.javatest;
 
