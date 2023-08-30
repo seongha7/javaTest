@@ -157,3 +157,46 @@ public class Sample implements Mother,Father{
         sample.country();
     }
 }
+
+
+//상속과 인터페이스 예시 
+
+package com.example.javatest;
+
+
+class Parents {
+    boolean hairLoss = false;
+
+}
+
+interface Programmer {
+    void programming();
+}
+
+interface Driver {
+    void drive();
+}
+
+public class Sample extends Parents implements Programmer,Driver{
+
+    @Override
+    public void programming() {
+        System.out.println("나는 프로그래머");
+    }
+
+    @Override
+    public void drive() {
+        System.out.println("나는 드라이버");
+    }
+
+    public static void main(String[] args) {
+        Sample sample = new Sample();
+        if (sample.hairLoss) {
+            System.out.println("탈모..");
+        } else {
+            System.out.println("탈모 아님 ㅋ");
+        }
+        sample.programming();
+        sample.drive();
+    }
+}
