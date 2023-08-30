@@ -37,3 +37,33 @@ class Holjjag {
     }
 
 }
+
+// Holjjag 클래스를 따로 두고 메인메서드에서 결과 보기
+
+package com.example.javatest;
+
+
+
+public class Sample {
+    public static void main(String[] args) {
+        Holjjag hj = new Holjjag();
+        hj.HoljjagMaker(3);
+        hj.HoljjagMaker(4);
+    }
+}
+
+class Holjjag {
+    int hol;
+    int jjag;
+
+    void HoljjagMaker (int inputHoljjag) {
+        if (inputHoljjag % 2 == 0) {
+            this.jjag = inputHoljjag;
+            System.out.println("짝수 " + this.jjag + " 입니다.");
+        } else {
+            this.hol = inputHoljjag;
+            System.out.println("홀수 " + this.hol + " 입니다.");
+        }
+    }
+
+}
