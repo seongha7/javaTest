@@ -26,3 +26,39 @@ class Car {
         System.out.println("연료의 양은 " + fuel + " 입니다.");
     }
 }
+
+// private 예시
+
+package com.example.javatest;
+
+
+public class Sample {
+    public static void main(String[] args) {
+        Car c = new Car();
+
+        //c.fuel = 10; -> 값을 직접 대입할 수 없다.
+
+        c.setFuel(10);
+        System.out.println(c.getFuel());
+
+        c.setFuel(-10);
+        System.out.println(c.getFuel());
+
+    }
+}
+
+class Car {
+    private int fuel;
+
+    void setFuel (int inputFuel) {
+        if (inputFuel > 0 && inputFuel <= 100) {
+            this.fuel = inputFuel;
+        } else {
+            System.out.println("fuel 값이 올바르지 않습니다.");
+            this.fuel = 0;
+        }
+    }
+    int getFuel () {
+        return this.fuel;
+    }
+}
