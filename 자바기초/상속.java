@@ -80,7 +80,7 @@ class HouseDog extends Dog {     // 메서드 오버라이딩
         System.out.println(this.name + " 자는중 in house");
     }
 
-    void sleep(int hour) {      // 입력 항목으로 hour라는 int 자료형 추가
+    void sleep(int hour) {      // 입력 항목으로 hour라는 int 자료형 추가 , 메서드 오버로딩
         System.out.println(this.name + " 자는중 in house 에서 " + hour + " 시간동안");
     }
 }
