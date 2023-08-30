@@ -75,7 +75,7 @@ class Dog extends Animal {
     }
 }
 
-class HouseDog extends Dog {
+class HouseDog extends Dog {     // 메서드 오버라이딩
     void sleep() {
         System.out.println(this.name + " 자는중 in house");
     }
