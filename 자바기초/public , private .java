@@ -47,6 +47,36 @@ public class Sample {
     }
 }
 
+
+// private 예시 2 
+
+package com.example.javatest;
+
+
+
+class MyClass {
+    private int number;
+    public String name;
+
+    public void setNumber(int number) { // setter
+        this.number = number;
+    }
+
+    public int getNumber() {  // getter
+        return this.number;
+    }
+}
+
+public class Sample {
+    public static void main(String[] args) {
+        MyClass cls = new MyClass();
+        cls.name = "seongha"; // public 이라서 가능
+        //cls.number = 1; -> private 이라 불가능
+        cls.setNumber(3); // MyClass의 멤버변수 int number 에 대입
+        int num = cls.getNumber();
+        System.out.println(cls.name + num);
+    }
+}
 class Car {
     private int fuel;
 
