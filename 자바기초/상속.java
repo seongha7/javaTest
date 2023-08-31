@@ -34,7 +34,7 @@ package com.example.javatest;
 
  class ParentCafe {
     String coffee;
-    int price;
+    int price;        // 접근 지정자 확인하기
 
     public void printMenu() {
         System.out.println(coffee + "는 " + price + "원입니다.");
