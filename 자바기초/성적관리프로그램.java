@@ -8,7 +8,9 @@ package com.example.javatest;
 등급이 낮은 학생과 높은 학셍에 따라 클래스 분류 및 점수가 낮은 학생들을 추가교육 실시
 class 학교 학생 과목 점수 학급 -> 너무 간단하게 만들지 말기
 점수에 따른 등급분류 필요
- 메인클래스에서 학생을 출력할때 등급 소속 반, 이름 , 추가교육여부 등등 출력하기 */
+ 메인클래스에서 학생을 출력할때 등급 소속 반, 이름 , 추가교육여부 등등 출력하기
+ 등급은 점수 단위 따라 abcdef로 나누기, 세 과목 의 평균으로 등급 구하기
+  */
 
 import java.util.ArrayList;
 
@@ -31,6 +33,8 @@ class Harvard {
 class Student {
     // abcde등급 학생 객체 생성
     private String studentName;
+    
+
     public Student(String studentName) {
         this.studentName = studentName;
     }
@@ -47,14 +51,18 @@ class Student {
 class ExtraEducation {
     // d등급부터 추가교육 실시 ( 평균이 아닌 한 과목씩보고)
 }
-// 등급분류 클래스
-class Grade {
-    // 등급은 점수 단위 따라 abcdef로 나누기, 세 과목 의 평균으로 등급 구하기
-    private String subjectGrade;
+
+class Score {
+    private int subjectScore;
 }
 
 //과목
 class Subject {
     private String subjectName; // 국어, 영어 , 수학 추가 예정
     private int subjectScore;
+}
+public class Sample {
+    public static void main(String[] args) {
+
+    }
 }
