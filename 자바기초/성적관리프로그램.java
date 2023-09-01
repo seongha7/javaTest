@@ -9,10 +9,8 @@ package com.example.javatest;
 class 학교 학생 과목 점수 학급 -> 너무 간단하게 만들지 말기
 점수에 따른 등급분류 필요
  메인클래스에서 학생을 출력할때 등급 소속 반, 이름 , 추가교육여부 등등 출력하기
- 등급은 점수 단위 따라 abcdef로 나누기, 세 과목 의 평균으로 등급 구하기
+ 등급은 점수 단위 따라 1-7등급으로 나누기, 세 과목 의 평균으로 등급 구하기
   */
-
-import java.util.ArrayList;
 
 class School {
     // school 클래스에는 대략적인 모든 정보들을 저장
@@ -20,20 +18,20 @@ class School {
 
 // 학교 안 학급 클래스 구성
 class Standford {
-    // b등급 학생들 소속
+    // 2등급 학생들 소속
 }
 class Seoul {
-    // c 등급 - 이하 학생들 소속
+    // 3 등급 - 이하 학생들 소속
 }
 class Harvard {
-    // a 등급 학생들 소속
+    // 1 등급 학생들 소속
 }
 
 
 class Student {
-    // abcde등급 학생 객체 생성
+    // 학생 객체 생성
     private String studentName;
-    
+
 
     public Student(String studentName) {
         this.studentName = studentName;
@@ -41,26 +39,37 @@ class Student {
     public String getStudentName() {
         return studentName;
     }
-
-
-
 }
-// 학생 세부 분류는 필요할까..? -> 학생 클래스 내부에서 지정하기
 
 // 추가교육 클래스
 class ExtraEducation {
-    // d등급부터 추가교육 실시 ( 평균이 아닌 한 과목씩보고)
+    // 5등급부터 추가교육 실시 ( 평균이 아닌 한 과목씩보고)
 }
 
 class Score {
     private int subjectScore;
+
+    public void Score(int subjectScore) {
+        this.subjectScore = subjectScore;
+    }
+
+
 }
 
 //과목
 class Subject {
-    private String subjectName; // 국어, 영어 , 수학 추가 예정
-    private int subjectScore;
+    private String korean; // 국어, 영어 , 수학 추가 예정
+    private String english;
+    private String math;
+
+    public Subject(String korean, String english, String math) {
+        this.english = english;
+        this.korean = korean;
+        this.math = math;
+    }
+
 }
+
 public class Sample {
     public static void main(String[] args) {
 
