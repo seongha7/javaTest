@@ -58,11 +58,11 @@ class Score {
 
 //과목
 class Subject {
-    private String korean; // 국어, 영어 , 수학 추가 예정
-    private String english;
-    private String math;
+    private int korean; // 국어, 영어 , 수학 추가 예정
+    private int english;
+    private int math;
 
-    public Subject(String korean, String english, String math) {
+    public Subject(int korean, int english, int math) {
         this.english = english;
         this.korean = korean;
         this.math = math;
