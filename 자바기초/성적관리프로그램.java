@@ -177,3 +177,134 @@ public class Sample {
         sc.close();
     }
 }
+
+// scanner를 사용하지 않고 뽑아내기
+
+package com.example.javatest;
+
+
+
+class Student {
+    // 학생 객체 생성
+    String name; // 이름
+
+    // 과목 (int)로 지정
+    int math;
+    int english;
+    int korean;
+
+
+
+    public Student(String name, int math, int english, int korean){
+        this.name = name;
+        this.math = math;
+        this.english = english;
+        this.korean = korean;
+    }
+    
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", math=" + math +
+                ", english=" + english +
+                ", korean=" + korean +
+                '}';
+    }
+
+
+    // 과목점수합계
+    public double SumOfGrade(){
+        return math + korean + english;
+    }
+
+    // 과목점수평균
+    public double Average(){
+        return (double) (math + korean + english) / 3;
+    }
+
+    // 점수에 따른 학급 분류
+    public String Ban(){
+        if (Grade() == "A") {
+            return "아이비리그";
+        }
+        if (Grade() == "B") {
+            return "스카이";
+        }
+        if (Grade() == "C") {
+            return "인서울";
+        }
+        if (Grade() == "D" && Grade() == "F") {
+            return "파이팅";
+        }
+        return Grade();
+    }
+
+    // 점수에 따른 등급 분류
+    public String Grade(){
+        if ((Average() >= 90) && (Average() <= 100)) {
+            return "A";
+        }
+        if ((Average() >= 80) && (Average() < 90)) {
+           return "B";
+        }
+        if ((Average() >= 70) && (Average() < 80)) {
+           return "C";
+        }
+        if (Average() >= 60 && Average() < 70 ) {
+           return "D";
+        }
+        if (Average() < 60) {
+            return "F";
+        }
+        return Grade();
+    }
+
+
+}
+
+
+// 메인
+public class Sample {
+    public static void main(String[] args) {
+            Student student1 = new Student("seongha", 100, 100, 100);
+            Student student2 = new Student("poe", 100, 100, 100);
+            Student student3 = new Student("jin", 100, 100, 100);
+            Student student4 = new Student("lisa", 100, 100, 100);
+            Student student5 = new Student("tiger", 100, 100, 100);
+
+        System.out.println(student1);
+        System.out.println(student1.SumOfGrade());
+        System.out.println(student1.Average());
+        System.out.println(student1.Ban());
+        System.out.println(student1.Grade());
+
+        System.out.println(student2);
+        System.out.println(student2.SumOfGrade());
+        System.out.println(student2.Average());
+        System.out.println(student2.Ban());
+        System.out.println(student2.Grade());
+
+        System.out.println(student3);
+        System.out.println(student3.SumOfGrade());
+        System.out.println(student3.Average());
+        System.out.println(student3.Ban());
+        System.out.println(student3.Grade());
+
+        System.out.println(student4);
+        System.out.println(student4.SumOfGrade());
+        System.out.println(student4.Average());
+        System.out.println(student4.Ban());
+        System.out.println(student4.Grade());
+
+        System.out.println(student5);
+        System.out.println(student5.SumOfGrade());
+        System.out.println(student5.Average());
+        System.out.println(student5.Ban());
+        System.out.println(student5.Grade());
+
+
+
+
+    }
+}
