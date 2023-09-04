@@ -66,44 +66,91 @@ public class Sample {
 
 // scanner 활용한 성적관리 프로그램 
 
+package com.example.javatest;
+
 import java.util.Scanner;
 
 class Student {
     // 학생 객체 생성
-     String name;
-     int math;
-     int english;
-     int korean;
+    String name; // 이름
+
+    // 과목 (int)로 지정
+    int math;
+    int english;
+    int korean;
+
 
     public Student(String name,int math,int english,int korean){
         this.name = name;
         this.math = math;
         this.english = english;
         this.korean = korean;
+
     }
 
+    // 과목점수합계
     public double SumOfGrade(){
-        return math+korean+english;
+        return math + korean + english;
     }
-    public double Average(){
 
-        return (math+korean+english)/3;
+    // 과목점수평균
+    public double Average(){
+        return (double) (math + korean + english) / 3;
     }
+
+    // 점수에 따른 학급 분류
+    public String Ban(){
+        if (Grade() == "A") {
+            return "아이비리그";
+        }
+        if (Grade() == "B") {
+            return "스카이";
+        }
+        if (Grade() == "C") {
+            return "인서울";
+        }
+        if (Grade() == "D" && Grade() == "F") {
+            return "파이팅";
+        }
+        return Grade();
+    }
+
+    // 점수에 따른 등급 분류
+    public String Grade(){
+        if ((Average() >= 90) && (Average() <= 100)) {
+            return "A";
+        }
+        if ((Average() >= 80) && (Average() < 90)) {
+           return "B";
+        }
+        if ((Average() >= 70) && (Average() < 80)) {
+           return "C";
+        }
+        if (Average() >= 60 && Average() < 70 ) {
+           return "D";
+        }
+        if (Average() < 60) {
+            return "F";
+        }
+        return Grade();
+    }
+
 
 }
 
+// 메인
 public class Sample {
     public static void main(String[] args) {
-        int studentNum = 0;
+        int studentNum = 0; // 스캐너로 입력받을 학생 수
 
-        Scanner scanner = new Scanner(System.in);
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in); // 학생 수 스캐너
+        Scanner scanner = new Scanner(System.in); // 학생정보 스캐너
 
-        System.out.println("학생 수를 입력하세요");
+        System.out.print("학생 수를 입력하세요 -> ");
         studentNum = sc.nextInt();
 
         Student[] student = new Student[studentNum];
-        System.out.println("학생이름 수학점수 영어점수 국어점수 순으로 입력하시오(성하 100 100 100)");
+        System.out.println("학생이름, 수학점수, 영어점수, 국어점수 순으로 괄호 안 형식을 맞춰 입력하세요(성하 100 100 100)");
 
 
         for (int i = 0; i < student.length; i++) {
@@ -111,6 +158,7 @@ public class Sample {
             int math = scanner.nextInt();
             int english = scanner.nextInt();
             int korean = scanner.nextInt();
+
 
             student[i] = new Student(name,math,english,korean);
         }
@@ -120,9 +168,11 @@ public class Sample {
 
         for (int i = 0; i < student.length; i++) {
             System.out.print("학생이름: " + student[i].name
-                    + " 수학성적: " + student[i].math + " 영어성적: " + student[i].english + " 국어성적: " + student[i].korean);
-            System.out.print(" 총점: " + student[i].SumOfGrade());
-            System.out.println(" 평균: " + student[i].Average());
+                    + ", 수학성적: " + student[i].math + ", 영어성적: " + student[i].english + ", 국어성적: " + student[i].korean);
+            System.out.print(", 총점: " + student[i].SumOfGrade());
+            System.out.println(", 평균: " + student[i].Average());
+            System.out.println(" 등급: " + student[i].Grade());
+            System.out.println(" 소속학급: " + student[i].Ban());
         }
         scanner.close();
         sc.close();
