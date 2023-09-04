@@ -71,7 +71,6 @@ package com.example.javatest;
 import java.util.Scanner;
 
 class Student {
-    // 학생 객체 생성
     String name; // 이름
 
     // 과목 (int)로 지정
