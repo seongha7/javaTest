@@ -183,9 +183,7 @@ public class Sample {
 package com.example.javatest;
 
 
-
 class Student {
-    // 학생 객체 생성
     String name; // 이름
 
     // 과목 (int)로 지정
@@ -194,14 +192,13 @@ class Student {
     int korean;
 
 
-
     public Student(String name, int math, int english, int korean){
         this.name = name;
         this.math = math;
         this.english = english;
         this.korean = korean;
     }
-    
+
     @Override
     public String toString() {
         return "Student{" +
@@ -225,17 +222,17 @@ class Student {
 
     // 점수에 따른 학급 분류
     public String Ban(){
-        if (Grade() == "A") {
-            return "아이비리그";
+        if (Grade() == "A등급") {
+            return "아이비리그반";
         }
-        if (Grade() == "B") {
-            return "스카이";
+        if (Grade() == "B등급") {
+            return "스카이반";
         }
-        if (Grade() == "C") {
-            return "인서울";
+        if (Grade() == "C등급") {
+            return "인서울반";
         }
-        if (Grade() == "D" && Grade() == "F") {
-            return "파이팅";
+        if (Grade() == "D등급" || Grade() == "F등급") {
+            return "파이팅반";
         }
         return Grade();
     }
@@ -243,68 +240,65 @@ class Student {
     // 점수에 따른 등급 분류
     public String Grade(){
         if ((Average() >= 90) && (Average() <= 100)) {
-            return "A";
+            return "A등급";
         }
         if ((Average() >= 80) && (Average() < 90)) {
-           return "B";
+            return "B등급";
         }
         if ((Average() >= 70) && (Average() < 80)) {
-           return "C";
+            return "C등급";
         }
         if (Average() >= 60 && Average() < 70 ) {
-           return "D";
+            return "D등급";
         }
         if (Average() < 60) {
-            return "F";
+            return "F등급";
         }
         return Grade();
     }
-
-
 }
-
 
 // 메인
 public class Sample {
     public static void main(String[] args) {
-            Student student1 = new Student("seongha", 100, 100, 100);
-            Student student2 = new Student("poe", 100, 100, 100);
-            Student student3 = new Student("jin", 100, 100, 100);
-            Student student4 = new Student("lisa", 100, 100, 100);
-            Student student5 = new Student("tiger", 100, 100, 100);
+        Student student1 = new Student("seongha", 100, 100, 100);
+        Student student2 = new Student("poe", 80, 70, 60);
+        Student student3 = new Student("jin", 23, 13, 34);
+        Student student4 = new Student("lisa", 50, 60, 73);
+        Student student5 = new Student("tiger", 80, 78, 91);
 
         System.out.println(student1);
         System.out.println(student1.SumOfGrade());
         System.out.println(student1.Average());
         System.out.println(student1.Ban());
         System.out.println(student1.Grade());
+        System.out.println("---------------");
 
         System.out.println(student2);
         System.out.println(student2.SumOfGrade());
         System.out.println(student2.Average());
         System.out.println(student2.Ban());
         System.out.println(student2.Grade());
+        System.out.println("---------------");
 
         System.out.println(student3);
         System.out.println(student3.SumOfGrade());
         System.out.println(student3.Average());
         System.out.println(student3.Ban());
         System.out.println(student3.Grade());
+        System.out.println("---------------");
 
         System.out.println(student4);
         System.out.println(student4.SumOfGrade());
         System.out.println(student4.Average());
         System.out.println(student4.Ban());
         System.out.println(student4.Grade());
+        System.out.println("---------------");
 
         System.out.println(student5);
         System.out.println(student5.SumOfGrade());
         System.out.println(student5.Average());
         System.out.println(student5.Ban());
         System.out.println(student5.Grade());
-
-
-
-
     }
 }
