@@ -18,7 +18,7 @@ public class ClassClassifier {
         if (grade.equals("D") || grade.equals("F")) {
             return "파이팅";
         }
-        return "Unknown";
+        return "유효하지 않습니다.";
     }
 }
 
@@ -59,7 +59,7 @@ public class GradeClassifier {
         if (average < 60) {
             return "F";
         }
-        return "Unknown";
+        return "유효하지 않습니다.";
     }
 }
 
