@@ -1,6 +1,7 @@
 // 클래스 별로 나눠서 scanner로 주입 받는 코드
 
-// 반 관리 (ClassClassifier)
+
+// 반 관리 클래스 (ClassClassifier)
 
 package com.example.javatest;
 
@@ -22,7 +23,7 @@ public class ClassClassifier {
     }
 }
 
-// 등급 계산(GradeCalculator) -> 모든 점수의 합과 평균 구하는 메서드를 포함한다.
+// 등급 계산 클래스 (GradeCalculator) -> 모든 점수의 합과 평균 구하는 메서드를 포함한다.
 
 package com.example.javatest;
 
@@ -38,7 +39,7 @@ public class GradeCalculator {
 }
 
 
-// 등급 관리(GradeClassifier) -> 평균에 따른 등급을 구해준다.
+// 등급 관리 클래스 (GradeClassifier) -> 평균에 따른 등급을 구해준다.
 
 package com.example.javatest;
 
